@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.headline {
+  margin: 0;
+  background-color: #a614a6;
+  padding: 20px;
+  color: #ffffff;
+  animation: slidingHeading 3s 2s infinite alternate,
+    changeBGColor 5s 2s infinite alternate;
+}
+
+/* WRAPPER-BOX */
+.animations-box {
+  background: #000000;
+  max-width: 920px;
+  height: 920px;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* BOXES */
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #7fffd4;
+}
+.box1,
+.box2,
+.box3 {
+  background-color: #a614a6;
+  animation: changeBGColor 5s infinite;
+}
+.box4,
+.box5,
+.box6 {
+  animation: middleBoxes 3s 1s infinite alternate,
+    changeBG 3s linear 1s infinite alternate;
+}
+.box7,
+.box8,
+.box9 {
+  animation: bottomBoxes 3s 1s infinite alternate;
+}
+
+/* ANIMATIONS */
+@keyframes changeBGColor {
+  0% {
+    background-color: #a614a6;
+  }
+  33% {
+    background-color: #ff0000;
+  }
+  66% {
+    background-color: #ffff00;
+  }
+  100% {
+    background-color: #ff00ff;
+  }
+}
+@keyframes changeBG {
+  0% {
+    background: linear-gradient(180deg, #45acde 0%, #00ff00 200%);
+  }
+  33% {
+    background: linear-gradient(180deg, #45acde 0%, #00ff00 150%);
+  }
+  66% {
+    background: linear-gradient(180deg, #45acde 0%, #00ff00 100%);
+  }
+  100% {
+    background: linear-gradient(180deg, #45acde 0%, #00ff00 50%);
+  }
+}
+@keyframes slidingHeading {
+  from {
+    padding-left: 20px;
+    color: #ffffff;
+  }
+  to {
+    padding-left: 400px;
+    color: #63ecc5;
+    letter-spacing: 10px;
+  }
+}
+@keyframes middleBoxes {
+  0% {
+    transform: translate(0px, 0px) scale(0.7);
+  }
+  100% {
+    transform: translate(100px, -80px) scale(1.2);
+  }
+}
+@keyframes bottomBoxes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
